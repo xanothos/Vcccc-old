@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  strProblemDescription: MyString
+  strBriefDescription: MyString
+  dtEstimatedStartTime: 2009-10-10 08:41:13
+  dtEndDate: 2009-10-10
+  dtStartDate: 2009-10-10
+  contact_id: 1
+  technician_id: 1
+  strSolution: MyString
+
+two:
+  strProblemDescription: MyString
+  strBriefDescription: MyString
+  dtEstimatedStartTime: 2009-10-10 08:41:13
+  dtEndDate: 2009-10-10
+  dtStartDate: 2009-10-10
+  contact_id: 1
+  technician_id: 1
+  strSolution: MyString

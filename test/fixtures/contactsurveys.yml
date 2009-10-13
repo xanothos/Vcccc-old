@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  bReceiveEmail: false
+  iMembership: 1
+  strAdvertising: MyString
+  contact_id: 1
+
+two:
+  bReceiveEmail: false
+  iMembership: 1
+  strAdvertising: MyString
+  contact_id: 1

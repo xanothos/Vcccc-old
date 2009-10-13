@@ -1,0 +1,42 @@
+/* 
+    Document   : vineyard_cc
+    Created on : Oct 12, 2009, 8:21:26 AM
+    Author     : Xanothos
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body {
+    font-family: verdana;
+    font-size: small;
+    min-width: 895px;
+}
+
+.logo {
+    background: url('http://localhost:3000/images/logo.png');
+    background-repeat: no-repeat;
+    height: 190px;
+    width: 895px;
+}
+
+.left-body {
+    float:left;
+    min-width: 691px;
+    width: 691px;
+}
+
+.right-body {
+    float: right;
+    width: 200px;
+    height: 400px;
+    border-left: 1px dotted gray
+}
+
+.mission_statement p {
+    margin-left: 10px;
+}

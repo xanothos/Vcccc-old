@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  strFirstname: MyString
+  strLastname: MyString
+  initial: MyString
+  contact_type_id: 1
+  security_question_id: 1
+  security_question_answer: MyString
+
+two:
+  strFirstname: MyString
+  strLastname: MyString
+  initial: MyString
+  contact_type_id: 1
+  security_question_id: 1
+  security_question_answer: MyString

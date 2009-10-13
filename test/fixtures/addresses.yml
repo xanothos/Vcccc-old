@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  strAddress1: MyString
+  strAddress2: MyString
+  strCity: MyString
+  strState: MyString
+  strPostalCode: MyString
+  address_type_id: 1
+  contact_id: 1
+
+two:
+  strAddress1: MyString
+  strAddress2: MyString
+  strCity: MyString
+  strState: MyString
+  strPostalCode: MyString
+  address_type_id: 1
+  contact_id: 1

@@ -1,0 +1,18 @@
+<div class="mission_statement">
+  <h2>Mission Statement</h2>
+  <p>
+    To share the love of Jesus Christ in a practical and meaningful way by
+    providing free computer consulting to individuals that are in need.
+    Every person will be treated with the utmost love and respect
+    and will be offered an opportunity for prayer.
+  </p>
+</div>
+<div class="clinic_status">
+  <h2>Clinic Status</h2>
+  <%= render :partial=>'status' %>
+</div>
+<div class="admission">
+  <h2>Admission/Login</h2>
+  <p style="color: green"><%= flash[:notice] %></p>
+  <%= render :partial=>'login' %>
+</div>

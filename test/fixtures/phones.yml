@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  strPhoneNumber: MyString
+  contact_id: 1
+  phone_type_id: 1
+
+two:
+  strPhoneNumber: MyString
+  contact_id: 1
+  phone_type_id: 1

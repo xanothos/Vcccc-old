@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  strAddress: MyString
+  contact_id: 1
+  email_type_id: 1
+  bUseForNotification: false
+
+two:
+  strAddress: MyString
+  contact_id: 1
+  email_type_id: 1
+  bUseForNotification: false

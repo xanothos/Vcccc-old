@@ -1,0 +1,8 @@
+<p>Please note that the following fields are case sensitive.</p>
+<% form_for :home, @contact, :url=>{:action=>'login'} do |f| %>
+<%= f.label :strFirstname, 'First Name' %>
+<%= f.text_field :strFirstname %>
+<%= f.label :strLastname, 'Last Name' %>
+<%= f.text_field :strLastname %>
+<%= submit_tag 'Login' %>
+<%  end %>
