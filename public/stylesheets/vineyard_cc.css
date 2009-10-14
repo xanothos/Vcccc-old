@@ -10,33 +10,12 @@
    TODO customize this sample style
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
-
-body {
-    font-family: verdana;
-    font-size: small;
-    min-width: 895px;
-}
-
-.logo {
-    background: url('http://localhost:3000/images/logo.png');
-    background-repeat: no-repeat;
-    height: 190px;
-    width: 895px;
-}
-
-.left-body {
-    float:left;
-    min-width: 691px;
-    width: 691px;
-}
-
-.right-body {
-    float: right;
-    width: 200px;
-    height: 400px;
-    border-left: 1px dotted gray
-}
-
-.mission_statement p {
-    margin-left: 10px;
-}
+body { font-family: 'ArialMT', 'Arial', sans-serif; font-size: 1em; background: #fffad3 }
+body p { margin-top: 10px }
+.top-container { min-width:900px; width:900px; background: #fff; margin: 0px auto }
+.header { background: url('http://localhost:3000/images/logo.png') no-repeat; padding: 5px; height: 181px; }
+.header div { text-align: right; color: #fff; margin-right: 10px; font-size: .95em; padding: 2px }
+.left-container { float: left; width: 589px; border-right: 1px dotted black; padding-right: 10px; padding-bottom: 10px }
+.right-container { float: right; width: 290px; padding-left: 10px }
+#footer { clear: both; background: #065; }
+* html #footer { height:1px; }

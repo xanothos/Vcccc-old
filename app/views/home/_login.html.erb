@@ -1,4 +1,4 @@
-<p>Please note that the following fields are case sensitive.</p>
+<p>Returning customers, please login here.</p>
 <% form_for :home, @contact, :url=>{:action=>'login'} do |f| %>
 <%= f.label :strFirstname, 'First Name' %>
 <%= f.text_field :strFirstname %>
@@ -6,3 +6,5 @@
 <%= f.text_field :strLastname %>
 <%= submit_tag 'Login' %>
 <%  end %>
+<%= link_to 'Register here', :controller=>:login, :action=>:create %>
+<h6>Please note that the entry fields are case sensitive.</h6>

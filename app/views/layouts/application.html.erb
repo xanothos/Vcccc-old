@@ -1,19 +1,42 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Home: <%= controller.action_name %></title>
+  <title>
+    Layout Test
+  </title>
   <%= stylesheet_link_tag 'vineyard_cc' %>
-</head>
-<body>
-
-  <div class="logo"></div>
-  <div class="left-body">
-    <%= yield %>
-  </div>
-  <div class="right-body"></div>
-
-</body>
+  <script type="text/javascript">
+    function fixme() {
+      if (document.body.filters) {
+        alert('this is a test!');
+      }
+    }
+  </script>
+  </head>
+  <body onload="fixme();">
+    <div class="top-container">
+      <div class="header">
+        <div>15187 Palmer Road - Reynoldsburg OH 43068</div>
+        <div>740-927-7729 <a href="mailto:info@vineyard05.com">info@vineyard05.com</a></div>
+        <div>Office Hours: M-F 9:00-5:00</div>
+        <div>Sunday 9:00-10:30 AM</div>
+        <div><a href="mailto:info@vineyard05.com">Dave DiYanni, Senior Pastor</a></div>
+      </div>
+      <div class="left-container">
+        <div>
+          <%= yield %>
+        </div>
+      </div>
+      <div class="right-container">
+        <div>
+          <p>right side</p>
+        </div>
+      </div>
+      <div id="footer">
+        <span>footer!</span>
+      </div>
+    </div>
+  </body>
 </html>

@@ -13,6 +13,10 @@ class HomeController < ApplicationController
 
     if (c == nil)
       flash[:notice] = "The user cannot be found."
+      @count == 1 unless @count > 1
+      redirect_to :controller=>:login, :action=>:create if @count < 3
+      @count += 1
+      return
     else
       flash[:notice] = "Found our guy!"
     end
