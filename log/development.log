@@ -1897,3 +1897,281 @@ The error occurred while evaluating nil.>):
 Rendered rescues/_trace (111.1ms)
 Rendered rescues/_request_and_response (1.3ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-10-13 22:06:16) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:06:22) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (47.0ms)
+Completed in 1328ms (View: 1281, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-10-13 22:06:55) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"lNOD/CxgkVOKp0Ay65ORJRYfd8TBtUP9fDl6N0SNn0c=", "home"=>{"strLastname"=>"kjhkjh", "strFirstname"=>"kjhkj"}}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'kjhkj' AND "contacts"."strLastname" = 'kjhkjh') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.>):
+  app/controllers/home_controller.rb:16:in `login'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-10-13 22:08:31) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/home_controller.rb:12:in `login'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:08:35) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:08:38) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:08:39) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-10-13 22:08:44) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"lNOD/CxgkVOKp0Ay65ORJRYfd8TBtUP9fDl6N0SNn0c=", "home"=>{"strLastname"=>"kjhkjh", "strFirstname"=>"kjhkh"}}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'kjhkh' AND "contacts"."strLastname" = 'kjhkjh') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.<):
+  app/controllers/home_controller.rb:16:in `login'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:10:58) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:10:58) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (16.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:10:59) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:11:00) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (15.0ms)
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-10-13 22:11:03) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"lNOD/CxgkVOKp0Ay65ORJRYfd8TBtUP9fDl6N0SNn0c=", "home"=>{"strLastname"=>"kjhkjh", "strFirstname"=>"kjhkh"}}
+0
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'kjhkh' AND "contacts"."strLastname" = 'kjhkjh') LIMIT 1[0m
+Redirected to http://localhost:3000/login/create
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/home/login]
+
+
+Processing LoginController#create (for 127.0.0.1 at 2009-10-13 22:11:03) [GET]
+Rendering template within layouts/application
+Rendering login/create
+Completed in 94ms (View: 94, DB: 0) | 200 OK [http://localhost/login/create]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:11:26) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:11:27) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (16.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-10-13 22:11:30) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"lNOD/CxgkVOKp0Ay65ORJRYfd8TBtUP9fDl6N0SNn0c=", "home"=>{"strLastname"=>"kjhkjh", "strFirstname"=>"kjhkh"}}
+0
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'kjhkh' AND "contacts"."strLastname" = 'kjhkjh') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:12:45) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (15.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:12:46) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-10-13 22:12:48) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"lNOD/CxgkVOKp0Ay65ORJRYfd8TBtUP9fDl6N0SNn0c=", "home"=>{"strLastname"=>"kjhkjh", "strFirstname"=>"kjhkh"}}
+0
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'kjhkh' AND "contacts"."strLastname" = 'kjhkjh') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:13:59) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-10-13 22:14:05) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"lNOD/CxgkVOKp0Ay65ORJRYfd8TBtUP9fDl6N0SNn0c=", "home"=>{"strLastname"=>".,kjljlkj", "strFirstname"=>".,ms.,m"}}
+0
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = '.,ms.,m' AND "contacts"."strLastname" = '.,kjljlkj') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:16:06) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (15.0ms)
+Completed in 172ms (View: 15, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:16:06) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-10-13 22:16:16) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"lNOD/CxgkVOKp0Ay65ORJRYfd8TBtUP9fDl6N0SNn0c=", "home"=>{"strLastname"=>"kjhkjhkjh", "strFirstname"=>"kjhkjh"}}
+0
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'kjhkjh' AND "contacts"."strLastname" = 'kjhkjhkjh') LIMIT 1[0m
+Redirected to http://localhost:3000/home
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:16:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-10-13 22:16:22) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"lNOD/CxgkVOKp0Ay65ORJRYfd8TBtUP9fDl6N0SNn0c=", "home"=>{"strLastname"=>"lkjlkjl", "strFirstname"=>"lkjlkjlkj"}}
+0
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'lkjlkjlkj' AND "contacts"."strLastname" = 'lkjlkjl') LIMIT 1[0m
+Redirected to http://localhost:3000/home
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:16:22) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-10-13 22:16:27) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"lNOD/CxgkVOKp0Ay65ORJRYfd8TBtUP9fDl6N0SNn0c=", "home"=>{"strLastname"=>"jhghgfgfd", "strFirstname"=>"jhgjhgjhg"}}
+0
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'jhgjhgjhg' AND "contacts"."strLastname" = 'jhghgfgfd') LIMIT 1[0m
+Redirected to http://localhost:3000/home
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:16:27) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-10-13 22:16:32) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"lNOD/CxgkVOKp0Ay65ORJRYfd8TBtUP9fDl6N0SNn0c=", "home"=>{"strLastname"=>",mn,mn,", "strFirstname"=>",mn,mn,mn"}}
+0
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = ',mn,mn,mn' AND "contacts"."strLastname" = ',mn,mn,') LIMIT 1[0m
+Redirected to http://localhost:3000/home
+Completed in 32ms (DB: 0) | 302 Found [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-13 22:16:32) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/home]
