@@ -10,11 +10,16 @@
    TODO customize this sample style
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
-body { font-family: 'ArialMT', 'Arial', sans-serif; font-size: 1em; background: #fffad3 }
-body p { margin-top: 10px }
+body { font: 15px/20px 'ArialMT', 'Arial', sans-serif; background: #fffad3; padding: 0px; margin: 0px }
 .top-container { min-width:900px; width:900px; background: #fff; margin: 0px auto }
-.header { background: url('http://localhost:3000/images/logo.png') no-repeat; padding: 5px; height: 181px; }
-.header div { text-align: right; color: #fff; margin-right: 10px; font-size: .95em; padding: 2px }
+.header { background: url('http://localhost:3000/images/logo.png') no-repeat; padding: 5px; height: 181px }
+.header p { text-align: right; margin: 0px; padding-top: 0px; padding-bottom: 0px; color: #fff }
+.header div { padding: 4px; margin-right: 10px }
+#psdave { text-decoration: none }
+#psdave:hover { text-decoration: underline }
+.header a { color: #fffad3 }
+.header a:visited { color: #ffffff }
+.header a:hover { color: #ffff66; text-decoration: underline }
 .left-container { float: left; width: 589px; border-right: 1px dotted black; padding-right: 10px; padding-bottom: 10px }
 .right-container { float: right; width: 290px; padding-left: 10px }
 #footer { clear: both; background: #065; }

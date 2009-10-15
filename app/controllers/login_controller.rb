@@ -1,7 +1,7 @@
 class LoginController < ApplicationController
   def create
     # create a new account based on the information provided in the form
-
+    @contact = Contact.new
 
     respond_to do |format|
       format.html
