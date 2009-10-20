@@ -4,10 +4,6 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :state_id %><br />
-    <%= f.text_field :state_id %>
-  </p>
-  <p>
     <%= f.label :address1 %><br />
     <%= f.text_field :address1 %>
   </p>
@@ -18,6 +14,10 @@
   <p>
     <%= f.label :city %><br />
     <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :strState, 'State' %><br />
+    <%= f.text_field :strState %>
   </p>
   <p>
     <%= f.label :postal_code %><br />

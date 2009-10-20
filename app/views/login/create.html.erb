@@ -1,4 +1,42 @@
 <p style="color: green"><%= flash[:notice] %></p>
+<h2>Create a new account</h2>
 <% form_for @contact, :url=>{:action=>:save} do |form| %>
-<%= form.label %>
+<div>
+  <%= form.label :strFirstname, 'First Name' %>
+  <%= form.text_field :strFirstname %>
+</div>
+<div>
+  <%= form.label :strLastname, 'Last Name' %>
+  <%= form.text_field :strLastname %>
+</div>
+<div>
+  <%= form.label :security_question_id, 'Security Question' %>
+  <%= collection_select(:contact,
+    :security_question_id,
+    Listitem.find(:all, {:conditions=>"strListName='securityquestions'", :select=>'id, strListValue'}),
+    :id,
+    :strListValue,
+    {:prompt=>'Select One...'}) %>
+</div>
+<div>
+  <%= form.label :address1, 'Address' %>
+  <%= text_field(:address, :address1) %>
+</div>
+<div>
+  <%= form.label :address2, 'Address1' %>
+  <%= text_field(:address, :address1) %>
+</div>
+<div>
+  <%= form.label :city, 'City' %>
+  <%= text_field(:address, :city) %>
+</div>
+<div>
+  <%= form.label :strState, 'State' %>
+  <%= text_field(:address, :strState) %>
+</div>
+<div>
+  <%= form.label :postal_code, 'Postal Code' %>
+  <%= text_field(:address, :postal_code) %>
+</div>
+<div><%= submit_tag %></div>
 <% end %>
