@@ -2868,3 +2868,442 @@ Rendering home/index
 Rendered home/_status (0.0ms)
 Rendered home/_login (16.0ms)
 Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 08:47:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+ERROR: compiling _run_erb_app47views47login47show46html46erb RAISED compile error
+C:/working/ruby/ComputerClinic/app/views/login/show.html.erb:9: syntax error, unexpected kENSURE, expecting kEND
+C:/working/ruby/ComputerClinic/app/views/login/show.html.erb:11: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47login47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "Welcome, "; @output_buffer.concat((h @contact.strFirstname ).to_s); @output_buffer.concat ".\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "Show list of previous visits here!\n"
+ if (@workorders.nil?) 
+@output_buffer.concat "    <h2>No visits to display</h2>\n"
+ else 
+@output_buffer.concat "    <h2>You've had a visit or two in the past</h2>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/working/ruby/ComputerClinic/app/views/login/show.html.erb:11:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/working/ruby/ComputerClinic/app/views/login/show.html.erb:9: syntax error, unexpected kENSURE, expecting kEND
+C:/working/ruby/ComputerClinic/app/views/login/show.html.erb:11: syntax error, unexpected $end, expecting kEND) on line #9 of app/views/login/show.html.erb:
+6: <% else -%>
+7:     <h2>You've had a visit or two in the past</h2>
+
+    app/views/login/show.html.erb:11:in `compile!'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 08:47:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 08:48:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+
+ActionView::TemplateError (undefined method `count' for []:Array) on line #8 of app/views/login/show.html.erb:
+5:     <h2>No visits to display</h2>
+6: <% else -%>
+7:     <h2>You've had a visit or two in the past</h2>
+8:     count: <% @workorders.count %>
+9: <% end -%>
+
+    app/views/login/show.html.erb:8
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 08:49:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/login/show/1]
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" [0m
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 08:52:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/login/show/1]
+  [4;35;1mWorkorder Create (0.0ms)[0m   [0mINSERT INTO "workorders" ("dtStartDate", "updated_at", "strSolution", "contact_id", "technician_id", "strProblemDescription", "dtEstimatedStartTime", "dtEndDate", "strBriefDescription", "created_at") VALUES(NULL, '2009-12-19 13:53:03', NULL, 1, NULL, NULL, NULL, NULL, NULL, '2009-12-19 13:53:03')[0m
+  [4;36;1mWorkorder Update (15.0ms)[0m   [0;1mUPDATE "workorders" SET "strProblemDescription" = 'This is a test workorder', "dtEndDate" = '2009-01-03', "dtStartDate" = '2009-01-03', "updated_at" = '2009-12-19 13:54:23' WHERE "id" = 1[0m
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 08:54:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mWorkorder Load (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 08:55:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 08:55:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mWorkorder Load (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 08:55:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 08:55:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mWorkorder Load (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 09:08:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+ERROR: compiling _run_erb_app47views47login47show46html46erb RAISED compile error
+C:/working/ruby/ComputerClinic/app/views/login/show.html.erb:13: syntax error, unexpected kDO
+...workorders.each |workorder| do 
+                              ^
+C:/working/ruby/ComputerClinic/app/views/login/show.html.erb:22: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47login47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "Welcome, "; @output_buffer.concat((h @contact.strFirstname ).to_s); @output_buffer.concat ".\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+ if (@contact.workorders.length == 0) 
+@output_buffer.concat "    <h2>No visits to display</h2>\n"
+ else 
+@output_buffer.concat "    <h2>You've had a visit or two in the past</h2>\n"
+@output_buffer.concat "    <table>\n"
+@output_buffer.concat "        <th>\n"
+@output_buffer.concat "            <td>Description</td>\n"
+@output_buffer.concat "            <td>Date</td>\n"
+@output_buffer.concat "        </th>\n"
+@output_buffer.concat "        ";  @contact.workorders.each |workorder| do 
+@output_buffer.concat "            <tr>\n"
+@output_buffer.concat "                <td>"; @output_buffer.concat(( workorder.strDescription ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "                <td></td>\n"
+@output_buffer.concat "            </tr>\n"
+@output_buffer.concat "        ";  end 
+@output_buffer.concat "    </table>\n"
+ end 
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/working/ruby/ComputerClinic/app/views/login/show.html.erb:22:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/working/ruby/ComputerClinic/app/views/login/show.html.erb:13: syntax error, unexpected kDO
+...workorders.each |workorder| do 
+                              ^
+C:/working/ruby/ComputerClinic/app/views/login/show.html.erb:22: syntax error, unexpected kENSURE, expecting $end) on line #13 of app/views/login/show.html.erb:
+10:             <td>Description</td>
+11:             <td>Date</td>
+12:         </th>
+13:         <% @contact.workorders.each |workorder| do -%>
+14:             <tr>
+15:                 <td><%= workorder.strDescription %></td>
+16:                 <td></td>
+
+    app/views/login/show.html.erb:22:in `compile!'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 09:09:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+
+ActionView::TemplateError (undefined method `strDescription' for #<Workorder:0x58bcd74>) on line #15 of app/views/login/show.html.erb:
+12:         </th>
+13:         <% @contact.workorders.each do |workorder| -%>
+14:             <tr>
+15:                 <td><%= workorder.strDescription %></td>
+16:                 <td></td>
+17:             </tr>
+18:         <% end -%>
+
+    app/views/login/show.html.erb:15
+    app/views/login/show.html.erb:13
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 09:16:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mWorkorder Load (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 09:21:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 09:28:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mWorkorder Load (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 09:29:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 109ms (View: 93, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 09:30:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mWorkorder Load (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 188ms (View: 110, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 09:30:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mWorkorder Load (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 09:31:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mWorkorder Load (0.0ms)[0m   [0mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "workorders" WHERE ("workorders".contact_id = 1) [0m
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/login/show/1]

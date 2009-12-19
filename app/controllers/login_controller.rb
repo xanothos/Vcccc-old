@@ -30,6 +30,7 @@ class LoginController < ApplicationController
 
   def show
     @contact = Contact.find(params[:id])
+    @workorders = @contact.workorders.all
 
     rescue ActiveRecord::RecordNotFound
       logger.debug 'Matching record not found!'

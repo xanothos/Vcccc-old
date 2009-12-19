@@ -1,1 +1,20 @@
 Welcome, <%=h @contact.strFirstname %>.
+<br />
+
+<% if (@contact.workorders.length == 0) -%>
+    <h2>No visits to display</h2>
+<% else -%>
+    <h3>Previous Visits</h3>
+    <table style='width: 100%;text-align:left'>
+        <tr>
+            <th>Description</th>
+            <th>Date</th>
+        </tr>
+        <% @contact.workorders.each do |workorder| -%>
+            <tr>
+                <td><%= workorder.strProblemDescription %></td>
+                <td><%= workorder.dtStartDate.to_s %></td>
+            </tr>
+        <% end -%>
+    </table>
+<% end -%>

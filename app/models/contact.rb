@@ -6,4 +6,5 @@ class Contact < ActiveRecord::Base
   has_many :email
   has_many :phones
   has_many :addresses
+  has_many :workorders
 end
