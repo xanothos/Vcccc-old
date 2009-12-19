@@ -2487,3 +2487,384 @@ Migrating to CreateSessions (20091014021810)
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_sessions_on_session_id')[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("states")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("workorders")[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-12-19 01:35:58) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 110ms (View: 0, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 01:36:06) [GET]
+
+ActionController::RoutingError (No route matches "/he" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 01:36:11) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (16.0ms)
+Rendered home/_login (188.0ms)
+Completed in 1797ms (View: 1641, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-19 01:36:34) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"2qCfgCu2p1UVisPqtlYcU2Y6yUrmtz3jLdMB5Obv340=", "home"=>{"strLastname"=>"schouppe", "strFirstname"=>"matt"}}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'matt' AND "contacts"."strLastname" = 'schouppe') LIMIT 1[0m
+Redirected to http://localhost:3000/home
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 01:36:34) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-19 01:36:43) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"2qCfgCu2p1UVisPqtlYcU2Y6yUrmtz3jLdMB5Obv340=", "home"=>{"strLastname"=>"Schouppe", "strFirstname"=>"Matt"}}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'Matt' AND "contacts"."strLastname" = 'Schouppe') LIMIT 1[0m
+Redirected to http://localhost:3000/home
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 01:36:44) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 01:42:59) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-19 01:43:13) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"r/Jmo4xBl+jFxvSGKN7D5V3sdWpjReVIUC0aArTBFnE=", "home"=>{"strLastname"=>"Schouppe", "strFirstname"=>"Matt"}}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'Matt' AND "contacts"."strLastname" = 'Schouppe') LIMIT 1[0m
+Redirected to http://localhost:3000/login/show/1
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/home/login]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 01:43:13) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering login/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 01:46:31) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-19 01:46:39) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"AZpH2bEqiXIcWnewNmZc2nBqhWhSaSuUgNOsE8VjpUY=", "home"=>{"strLastname"=>"Schouppe", "strFirstname"=>"Matt"}}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'Matt' AND "contacts"."strLastname" = 'Schouppe') LIMIT 1[0m
+Redirected to http://localhost:3000/login/show/1
+Completed in 79ms (DB: 0) | 302 Found [http://localhost/home/login]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 01:46:39) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (uninitialized constant LoginController::Contacts):
+  app/controllers/login_controller.rb:32:in `show'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 01:47:00) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (16.0ms)
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-19 01:47:10) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"AZpH2bEqiXIcWnewNmZc2nBqhWhSaSuUgNOsE8VjpUY=", "home"=>{"strLastname"=>"Schouppe", "strFirstname"=>"Matt"}}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."strFirstname" = 'Matt' AND "contacts"."strLastname" = 'Schouppe') LIMIT 1[0m
+Redirected to http://localhost:3000/login/show/1
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/home/login]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 01:47:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = '--- :id
+') [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Contact with ID=id):
+  app/controllers/login_controller.rb:32:in `show'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 01:48:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+Completed in 93ms (View: 15, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 01:49:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 01:49:48) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Contact with ID=5):
+  app/controllers/login_controller.rb:32:in `show'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 01:51:08) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Contact with ID=5):
+  app/controllers/login_controller.rb:32:in `show'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 01:51:14) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mContact Load (15.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Contact with ID=5):
+  app/controllers/login_controller.rb:32:in `show'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 01:52:24) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Contact with ID=5):
+  app/controllers/login_controller.rb:32:in `show'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 01:53:56) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Contact with ID=5):
+  app/controllers/login_controller.rb:32:in `show'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 02:00:41) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+
+NameError (uninitialized constant LoginController::ActionRecord):
+  app/controllers/login_controller.rb:34:in `show'
+
+Rendered rescues/_trace (140.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 02:01:27) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+
+NameError (uninitialized constant LoginController::RecordNotFound):
+  app/controllers/login_controller.rb:34:in `show'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 02:02:01) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+Matching record not found!
+Redirected to http://localhost:3000/home
+
+NoMethodError (undefined method `&' for "contact nil: ":String):
+  app/controllers/login_controller.rb:38:in `show'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 02:02:23) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+Matching record not found!
+Redirected to http://localhost:3000/home
+
+TypeError (can't convert true into String):
+  app/controllers/login_controller.rb:38:in `+'
+  app/controllers/login_controller.rb:38:in `show'
+
+Rendered rescues/_trace (140.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 02:02:40) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+Matching record not found!
+Redirected to http://localhost:3000/home
+contact nil: true
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/login/show/5]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 02:02:40) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (16.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 02:03:00) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 02:04:32) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 02:04:57) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (15.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 02:05:26) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 02:06:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 02:34:58) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+Matching record not found!
+Redirected to http://localhost:3000/home
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/login/show/5]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 02:34:58) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (16.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 02:42:59) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (47.0ms)
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 02:43:12) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+Matching record not found!
+Redirected to http://localhost:3000/home
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/login/show/5]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 02:43:13) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 02:43:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering login/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/login/show/1]
+
+
+Processing LoginController#show (for 127.0.0.1 at 2009-12-19 02:44:13) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 5) [0m
+Matching record not found!
+Redirected to http://localhost:3000/home
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/login/show/5]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 02:44:13) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_status (0.0ms)
+Rendered home/_login (16.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/home]

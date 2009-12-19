@@ -23,7 +23,8 @@ class HomeController < ApplicationController
         session[:count] += 1
       end
     else
-      flash[:notice] = "Found our guy!"
+      redirect_to :controller=>:login, :action=>:show, :id=>c.id
+      return
     end
 
     redirect_to :action=>'index'

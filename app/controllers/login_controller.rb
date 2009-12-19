@@ -29,7 +29,11 @@ class LoginController < ApplicationController
   end
 
   def show
+    @contact = Contact.find(params[:id])
 
+    rescue ActiveRecord::RecordNotFound
+      logger.debug 'Matching record not found!'
+      redirect_to :controller=>:home, :action=>:index
   end
 
 end
