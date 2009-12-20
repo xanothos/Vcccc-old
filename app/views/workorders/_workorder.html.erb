@@ -1,0 +1,5 @@
+<tr>
+    <td><%= link_to 'View', {:controller=>:workorder, :action=>:show, :id=>workorder.id} %></td>
+    <td><%= workorder.strProblemDescription %></td>
+    <td><%= workorder.dtStartDate.to_s %></td>
+</tr>

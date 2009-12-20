@@ -24,3 +24,5 @@ body { font: 15px/20px 'ArialMT', 'Arial', sans-serif; background: #fffad3; padd
 .right-container { float: right; width: 290px; padding-left: 10px }
 #footer { clear: both; background: #065; }
 * html #footer { height:1px; }
+table { text-align: left }
+table#workorders { width: 100% }
