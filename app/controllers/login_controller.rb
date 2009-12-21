@@ -25,7 +25,7 @@ class LoginController < ApplicationController
     logger.debug contact[:strFirstname]
     logger.debug address[:address1]
 
-    redirect_to :action=>:show, :id=>1
+    flash[:notice] = "The contact record was saved."
   end
 
   def show
