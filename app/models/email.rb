@@ -1,4 +1,6 @@
 class Email < ActiveRecord::Base
+  validates_presence_of :emailtype
+
   belongs_to :contacts
 
   belongs_to :emailtype,
