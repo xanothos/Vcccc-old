@@ -19,11 +19,12 @@ class LoginController < ApplicationController
   end
 
   def save
-    address = params[:address]
-    contact = params[:contact]
+    @address = params[:address]
+    @contact = params[:contact]
     logger.debug 'got here!'
-    logger.debug contact[:strFirstname]
-    logger.debug address[:address1]
+    @contact.addresses << @address
+    @contact.save
+    logger.debug 'after save'
 
     flash[:notice] = "The contact record was saved."
   end
