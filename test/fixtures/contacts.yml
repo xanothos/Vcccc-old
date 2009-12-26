@@ -1,17 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  strFirstname: MyString
-  strLastname: MyString
-  initial: MyString
+  strFirstname: John
+  strLastname: Dough
+  initial: Q
   contact_type_id: 1
   security_question_id: 1
-  security_question_answer: MyString
+  security_question_answer: red
 
 two:
-  strFirstname: MyString
-  strLastname: MyString
-  initial: MyString
+  strFirstname: Jane
+  strLastname: Dough
+  initial: Q
   contact_type_id: 1
   security_question_id: 1
-  security_question_answer: MyString
+  security_question_answer: blue

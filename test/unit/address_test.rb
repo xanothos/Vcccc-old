@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class AddressTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  test 'address type cannot be nil' do
+    a = Address.new
+    assert !a.save, 'Address was saved successfully'
+    assert a.errors.invalid?(:addresstype)
   end
 end
