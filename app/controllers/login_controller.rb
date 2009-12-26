@@ -9,24 +9,18 @@ class LoginController < ApplicationController
     end
   end
 
-  def index
-    # redirect to the general index page
-    @contact = Contact.new
+  def save
+    @address = params[:address]
+    @contact = params[:contact]
+
+    @contact.addresses << @address
+    @contact.save
+
+    flash[:notice] = "The contact record was saved."
 
     respond_to do |format|
       format.html
     end
-  end
-
-  def save
-    @address = params[:address]
-    @contact = params[:contact]
-    logger.debug 'got here!'
-    @contact.addresses << @address
-    @contact.save
-    logger.debug 'after save'
-
-    flash[:notice] = "The contact record was saved."
   end
 
   def show
