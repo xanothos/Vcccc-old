@@ -251,3 +251,173 @@
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+  [4;36;1mAddress Load (0.0ms)[0m   [0;1mSELECT * FROM "addresses" [0m
+  [4;35;1mAddress Load (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 1) [0m
+  [4;36;1mAddress Load (0.0ms)[0m   [0;1mSELECT * FROM "addresses" [0m
+  [4;35;1mAddress Load (0.0ms)[0m   [0mSELECT * FROM "addresses" LIMIT 1[0m
+  [4;36;1mAddress Load (0.0ms)[0m   [0;1mSELECT * FROM "addresses" LIMIT 1[0m
+  [4;35;1mListitem Load (0.0ms)[0m   [0mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;36;1mAddress Load (0.0ms)[0m   [0;1mSELECT * FROM "addresses" LIMIT 1[0m
+  [4;36;1mAddress Load (0.0ms)[0m   [0;1mSELECT * FROM "addresses" LIMIT 1[0m
+  [4;35;1mContact Load (0.0ms)[0m   [0mSELECT * FROM "contacts" LIMIT 1[0m
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" LIMIT 1[0m
+  [4;35;1mListitem Load (0.0ms)[0m   [0mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;36;1mContact Load (0.0ms)[0m   [0;1mSELECT * FROM "contacts" LIMIT 1[0m
+  [4;35;1mSQL (15.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;35;1mListitem Load (0.0ms)[0m   [0mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;35;1mListitem Load (0.0ms)[0m   [0mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;35;1mListitem Load (0.0ms)[0m   [0mSELECT * FROM "listitems" WHERE ("listitems"."id" = 1) [0m
+  [4;36;1mListitem Create (0.0ms)[0m   [0;1mINSERT INTO "listitems" ("updated_at", "strListValue", "strListName", "created_at") VALUES('2009-12-27 14:04:37', 'home', 'address_type', '2009-12-27 14:04:37')[0m
+  [4;35;1mListitem Load (16.0ms)[0m   [0mSELECT * FROM "listitems" [0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."id" = 2053832786) [0m
+  [4;35;1mListitem Load (0.0ms)[0m   [0mSELECT * FROM "listitems" WHERE ("listitems"."id" = 2053932786) [0m
+  [4;36;1mAddress Create (0.0ms)[0m   [0;1mINSERT INTO "addresses" ("address1", "city", "strState", "address2", "postal_code", "updated_at", "contact_id", "created_at", "address_type_id") VALUES('123', '123', 'OH', NULL, 12345, '2009-12-27 14:06:13', 1, '2009-12-27 14:06:13', 2053932786)[0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."strListValue" = 'home' AND "listitems"."strListName" = 'address_type') LIMIT 1[0m
+  [4;35;1mListitem Load (0.0ms)[0m   [0mSELECT * FROM "listitems" WHERE ("listitems"."id" = 2053932785) [0m
+  [4;36;1mAddress Create (0.0ms)[0m   [0;1mINSERT INTO "addresses" ("address1", "city", "strState", "address2", "postal_code", "updated_at", "contact_id", "created_at", "address_type_id") VALUES('123 Anywhere Street', 'Springfield', 'CA', NULL, '90210', '2009-12-27 14:09:13', 1, '2009-12-27 14:09:13', 2053932785)[0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."strListValue" = 'home' AND "listitems"."strListName" = 'address_type') LIMIT 1[0m
+  [4;35;1mListitem Create (0.0ms)[0m   [0mINSERT INTO "listitems" ("updated_at", "strListValue", "strListName", "created_at") VALUES('2009-12-27 14:17:07', 'home', 'address_type', '2009-12-27 14:17:07')[0m
+  [4;36;1mListitem Load (0.0ms)[0m   [0;1mSELECT * FROM "listitems" WHERE ("listitems"."id" = 2053932787) [0m
+  [4;35;1mAddress Create (0.0ms)[0m   [0mINSERT INTO "addresses" ("address1", "city", "strState", "address2", "postal_code", "updated_at", "contact_id", "created_at", "address_type_id") VALUES('123 Anywhere Street', 'Springfield', 'CA', NULL, '90210', '2009-12-27 14:17:07', 1, '2009-12-27 14:17:07', 2053932787)[0m
+  [4;35;1mListitem Load (0.0ms)[0m   [0mSELECT * FROM "listitems" [0m
+  [4;36;1mAddress Load (0.0ms)[0m   [0;1mSELECT * FROM "addresses" [0m

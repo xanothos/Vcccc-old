@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  strListName: MyString
-  strListValue: MyString
+  strListName: phone_type
+  strListValue: home
 
 two:
-  strListName: MyString
-  strListValue: MyString
+  strListName: email_type
+  strListValue: personal
