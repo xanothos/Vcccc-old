@@ -21,7 +21,7 @@ class AddressTest < ActiveSupport::TestCase
 
   test 'proper address creation' do
     # the corresponsing list item must exist, so find it or create it
-    l = Listitem.find_or_create_by_strListName_and_strListValue('address_type', 'home')
+    l = Listitem.find_or_create_by_strListName_and_strListValue("address_type", "home")
 
     a = Address.create(
         :address1 => '123 Anywhere Street',
@@ -36,4 +36,27 @@ class AddressTest < ActiveSupport::TestCase
     
   end
 
+  # verifies that the belongs_to association is defined correctly
+  test "verify contact assciation by name" do
+    s = Listitem.find_or_create_by_strListName_and_strListValue("security_question", "favorite color")
+    c = Contact.find_or_create_by_strFirstname_and_strLastname_and_security_question_id_and_security_question_answer("Test", "Client", s.id, "red")
+    l = Listitem.find_or_create_by_strListName_and_strListValue("address_type", "home")
+
+    assert !s.new_record?, "Security question not found or created!"
+    assert !c.new_record?, "Contact record not found and not created!"
+    assert !l.new_record?, "Address type not found and not created!"
+
+    a = Address.create(
+        :address1 => "",
+        :address2 => "",
+        :city => "",
+        :strState => "",
+        :postal_code => 12345,
+        :address_type_id => l.id,
+        :contact_id => c.id)
+
+    assert !a.contact_id.nil?, "No contact assigned to this address!"
+    assert a.contact.strFirstname == "Test", "Unable to link to associated contact record!"
+
+  end
 end

@@ -4,7 +4,7 @@ class Address < ActiveRecord::Base
 
   belongs_to :address_type,
     :class_name => "Listitem"
-    #:foreign_key => "address_type_id"
+    # :foreign_key not specified; using default convention of #{name}_id (ie: address_type_id)
 
-  belongs_to :Contact
+  belongs_to :contact
 end
