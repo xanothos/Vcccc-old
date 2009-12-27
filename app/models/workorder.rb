@@ -1,4 +1,4 @@
 class Workorder < ActiveRecord::Base
-  belongs_to :contacts
+  belongs_to :Contact
 
 end
