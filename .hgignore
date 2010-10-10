@@ -1,4 +1,0 @@
-glob:log/*
-glob:.DS_Store
-glob:nbproject/private/*
-glob:db/test.sqlite3

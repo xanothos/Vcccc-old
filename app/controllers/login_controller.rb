@@ -24,6 +24,10 @@ class LoginController < ApplicationController
   end
 
   def show
+    if (session[:id].to_s != params[:id])
+      flash[:notice] = "You don't have access to that account"
+      redirect_to :controller=>:home, :action => :index
+    end
     @contact = Contact.find(params[:id])
     @workorders = @contact.workorders.all
 

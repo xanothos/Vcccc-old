@@ -23,6 +23,7 @@ class HomeController < ApplicationController
         session[:count] += 1
       end
     else
+      session[:id] = c.id
       redirect_to :controller=>:login, :action=>:show, :id=>c.id
       return
     end
