@@ -1,4 +1,7 @@
 Welcome, <%=h @contact.strFirstname %>.
 <br />
-
-<%= render :partial=>"workorder/workorders", :object=>@contact %>
+<% if (@contact.workorders.length > 0) then -%>
+  <%= render :partial=>"workorder/workorders", :object=>@contact %>
+<% else -%>
+  <h5>There are no workorders for you</h5>
+<% end -%>
