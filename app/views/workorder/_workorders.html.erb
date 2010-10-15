@@ -1,0 +1,12 @@
+<table id='workorders'>
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Description</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial=>"workorder/workorder", :collection=>@contact.workorders %>
+  </tbody>
+</table>

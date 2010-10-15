@@ -1,7 +1,4 @@
 Welcome, <%=h @contact.strFirstname %>.
 <br />
 
-# displayworkorders defined in loginhelper.rb
-<% displayworkorders @contact.workorders do |workorder| -%>
-    <%= render :partial=> workorder %>
-<% end -%>
+<%= render :partial=>"workorder/workorders", :object=>@contact %>
