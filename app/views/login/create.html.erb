@@ -22,13 +22,25 @@
     <%= form.label :security_question_answer, 'Answer' %>
     <%= form.text_field :security_question_answer %>
 </div>
+
+<div>
+  <%= form.label :address_type_id, 'Address Type' %>
+  <%= collection_select(:address,
+    :address_type_id,
+    Listitem.find(:all, {:conditions=>"strListName='emailtype'", :select=>'id, strListValue'}),
+    :id,
+    :strListValue,
+    {:prompt=>'Select One...'}) %>
+</div>
+
+
 <div>
   <%= form.label :address1, 'Address' %>
   <%= text_field(:address, :address1) %>
 </div>
 <div>
   <%= form.label :address2, 'Address1' %>
-  <%= text_field(:address, :address1) %>
+  <%= text_field(:address, :address2) %>
 </div>
 <div>
   <%= form.label :city, 'City' %>
