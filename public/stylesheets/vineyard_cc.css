@@ -26,3 +26,5 @@ body { font: 15px/20px 'ArialMT', 'Arial', sans-serif; background: #fffad3; padd
 * html #footer { height:1px; }
 table { text-align: left }
 table#workorders { width: 100% }
+.login-entry-label { float: left }
+.login-entry-field { margin-left: 6em; padding-bottom: .5em}

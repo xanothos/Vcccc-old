@@ -1,10 +1,15 @@
-<p>Returning customers, please login here.</p>
+<p>Returning visitors, please login below or if this is your first visit, <%= link_to 'register here.', :controller=>:login, :action=>:create %></p>
 <% form_for :home, @contact, :url=>{:action=>'login'} do |f| %>
-<%= f.label :strFirstname, 'First Name' %>
-<%= f.text_field :strFirstname %>
-<%= f.label :strLastname, 'Last Name' %>
-<%= f.text_field :strLastname %>
-<%= submit_tag 'Login' %>
+<div>
+  <div class="login-entry-label"><%= f.label :strFirstname, 'First Name' %></div>
+  <div class="login-entry-field"><%= f.text_field :strFirstname %></div>
+</div>
+<div>
+    <div class="login-entry-label"><%= f.label :strLastname, 'Last Name' %></div>
+    <div class="login-entry-field"><%= f.text_field :strLastname %></div>
+</div>
+<div>
+  <%= submit_tag 'Login' %>
+</div>
 <%  end %>
-<%= link_to 'Register here', :controller=>:login, :action=>:create %>
 <h6>Please note that the entry fields are case sensitive.</h6>
