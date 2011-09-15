@@ -28,3 +28,6 @@ table { text-align: left }
 table#workorders { width: 100% }
 .login-entry-label { float: left }
 .login-entry-field { margin-left: 6em; padding-bottom: .5em}
+.login-create-label { float: left }
+.login-create-field { margin-left: 8.5em; padding-bottom: .2em }
+#login-create-submit { padding-top: 1em }

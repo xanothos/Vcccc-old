@@ -1,58 +1,64 @@
 <p style="color: green"><%= flash[:notice] %></p>
 <h2>Create a new account</h2>
 <% form_for @contact, :url=>{:action=>:save} do |form| %>
-<div>
-  <%= form.label :strFirstname, 'First Name' %>
-  <%= form.text_field :strFirstname %>
+<fieldset>
+  <legend>Personal Information</legend>
+    <div>
+      <div class="login-create-label"><%= form.label :strFirstname, 'First Name' %></div>
+      <div class="login-create-field"><%= form.text_field :strFirstname %></div>
+    </div>
+    <div>
+      <div class="login-create-label"><%= form.label :strLastname, 'Last Name' %></div>
+      <div class="login-create-field"><%= form.text_field :strLastname %></div>
+    </div>
+    <div>
+      <div class="login-create-label"><%= form.label :security_question_id, 'Security Question' %></div>
+      <div class="login-create-field"><%= collection_select(:contact,
+        :security_question_id,
+        Listitem.find(:all, {:conditions=>"strListName='securityquestions'", :select=>'id, strListValue'}),
+        :id,
+        :strListValue,
+        {:prompt=>'Select One...'}) %></div>
+    </div>
+    <div>
+        <div class="login-create-label"><%= form.label :security_question_answer, 'Answer' %></div>
+        <div class="login-create-field"><%= form.text_field :security_question_answer %></div>
+    </div>
+</fieldset>
+<fieldset>
+  <legend>Address</legend>
+    <div>
+      <div class="login-create-label"><%= form.label :address_type_id, 'Address Type' %></div>
+      <div class="login-create-field"><%= collection_select(:address,
+        :address_type_id,
+        Listitem.find(:all, {:conditions=>"strListName='emailtype'", :select=>'id, strListValue'}),
+        :id,
+        :strListValue,
+        {:prompt=>'Select One...'}) %></div>
+    </div>
+    <div>
+      <div class="login-create-label"><%= form.label :address1, 'Address' %></div>
+      <div class="login-create-field"><%= text_field(:address, :address1) %></div>
+    </div>
+    <div>
+      <div class="login-create-label"><%= form.label :address2, 'Address1' %></div>
+      <div class="login-create-field"><%= text_field(:address, :address2) %></div>
+    </div>
+    <div>
+      <div class="login-create-label"><%= form.label :city, 'City' %></div>
+      <div class="login-create-field"><%= text_field(:address, :city) %></div>
+    </div>
+    <div>
+      <div class="login-create-label"><%= form.label :strState, 'State' %></div>
+      <div class="login-create-field"><%= text_field(:address, :strState) %></div>
+    </div>
+    <div>
+      <div class="login-create-label"><%= form.label :postal_code, 'Postal Code' %></div>
+      <div class="login-create-field"><%= text_field(:address, :postal_code) %></div>
+    </div>
+</fieldset>
+<div id="login-create-submit">
+  <%= submit_tag "Register" %>
+  <%= link_to 'cancel', {:controller=>:home, :action=>:index} %>
 </div>
-<div>
-  <%= form.label :strLastname, 'Last Name' %>
-  <%= form.text_field :strLastname %>
-</div>
-<div>
-  <%= form.label :security_question_id, 'Security Question' %>
-  <%= collection_select(:contact,
-    :security_question_id,
-    Listitem.find(:all, {:conditions=>"strListName='securityquestions'", :select=>'id, strListValue'}),
-    :id,
-    :strListValue,
-    {:prompt=>'Select One...'}) %>
-</div>
-<div>
-    <%= form.label :security_question_answer, 'Answer' %>
-    <%= form.text_field :security_question_answer %>
-</div>
-
-<div>
-  <%= form.label :address_type_id, 'Address Type' %>
-  <%= collection_select(:address,
-    :address_type_id,
-    Listitem.find(:all, {:conditions=>"strListName='emailtype'", :select=>'id, strListValue'}),
-    :id,
-    :strListValue,
-    {:prompt=>'Select One...'}) %>
-</div>
-
-
-<div>
-  <%= form.label :address1, 'Address' %>
-  <%= text_field(:address, :address1) %>
-</div>
-<div>
-  <%= form.label :address2, 'Address1' %>
-  <%= text_field(:address, :address2) %>
-</div>
-<div>
-  <%= form.label :city, 'City' %>
-  <%= text_field(:address, :city) %>
-</div>
-<div>
-  <%= form.label :strState, 'State' %>
-  <%= text_field(:address, :strState) %>
-</div>
-<div>
-  <%= form.label :postal_code, 'Postal Code' %>
-  <%= text_field(:address, :postal_code) %>
-</div>
-<div><%= submit_tag %></div>
 <% end %>
